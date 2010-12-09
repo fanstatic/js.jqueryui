@@ -1,0 +1,42 @@
+How to use?
+===========
+
+This should be setup before rendering a page. See `fanstatic`_ for more
+information::
+
+  >>> from fanstatic import init_current_needed_inclusions
+  >>> needed = init_current_needed_inclusions(base_url='http://localhost')
+
+You can import jQuery UI from ``js.jqueryui`` and ``.need`` it
+where you want these resources to be included on a page::
+
+  >>> from js.jqueryui import jqueryui
+  >>> jqueryui.need()
+
+Render the inclusion::
+
+  >>> print needed.render()
+  <script type="text/javascript" src="http://localhost/fanstatic/jquery/jquery.js"></script>
+  <script type="text/javascript" src="http://localhost/fanstatic/jqueryui/ui/jquery-ui.js"></script>
+
+Minified::
+
+  >>> needed._mode = 'minified'
+  >>> print needed.render()
+  <script type="text/javascript" src="http://localhost/fanstatic/jquery/jquery.min.js"></script>
+  <script type="text/javascript" src="http://localhost/fanstatic/jqueryui/ui/minified/jquery-ui.min.js"></script>
+
+Themes
+------
+
+The themes in the jQuery UI themes distribution are included as well::
+
+  >>> needed = init_current_needed_inclusions(base_url='http://localhost')
+  >>> from js.jqueryui import black_tie
+  >>> black_tie.need()
+
+Render the inclusion::
+
+  >>> print needed.render()
+  <link rel="stylesheet" type="text/css" href="http://localhost/fanstatic/jqueryui/themes/black-tie/jquery-ui.css" />
+

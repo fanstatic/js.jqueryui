@@ -1,0 +1,5 @@
+recursive-include js/jqueryui/resources *.js
+recursive-include js/jqueryui/resources *.css
+recursive-include js/jqueryui/resources *.png
+recursive-include js/jqueryui/ *.txt
+include *.txt
