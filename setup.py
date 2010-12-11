@@ -38,9 +38,6 @@ setup(
         test=['pytest >= 2.0'],
         ),
     entry_points={
-        'console_scripts': [
-            'prepare = js.jqueryui.prepare:main',
-            ],
         'fanstatic.libraries': [
             'jqueryui = js.jqueryui:library',
             ],
