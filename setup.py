@@ -1,9 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-JQUERYUI_VERSION = '1.8.7'
 version = '1.8.7'
-# Name version after JQUERY_TOOLTIP_VERSION + .suffix
 
 def read(*rnames):
     return open(os.path.join(os.path.dirname(__file__), *rnames)).read()
