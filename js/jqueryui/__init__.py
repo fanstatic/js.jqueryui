@@ -3,16 +3,19 @@ import js.jquery
 
 library = Library('jqueryui', 'resources')
 
-# CDN info from http://blog.jqueryui.com/2011/01/jquery-ui-1-8-8/
-version = '1.8.8'
-google = '//ajax.googleapis.com/ajax/libs/jqueryui/' + version
-microsoft = '//ajax.aspnetcdn.com/ajax/jquery.ui/' + version
-
 def cdnify(path):
-    return {
-        'google': '%s/%s/' % (google, path),
-        'microsoft': '%s/%s/' % (microsoft, path),
-    }
+    # CDN info from http://blog.jqueryui.com/2011/01/jquery-ui-1-8-7/
+    version = '1.8.7'
+
+    cdns = dict(
+        google='%(scheme)s://ajax.googleapis.com/ajax/libs/jqueryui/%(version)s/%(path)s',
+        microsoft='%(scheme)s://ajax.aspnetcdn.com/ajax/jquery.ui/%(version)s/%(path)s'
+    )
+    result = {}
+    for cdn_name, url_stub in cdns.items():
+        for scheme in ['http', 'https']:
+            result[(cdn_name, scheme)] = url_stub % locals()
+    return result
 
 _jqueryui_minified = Resource(library, 'ui/minified/jquery-ui.min.js',
     depends=[js.jquery.jquery], cdns=cdnify('jquery-ui.min.js'))
