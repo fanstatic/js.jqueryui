@@ -1,7 +1,7 @@
 CHANGES
 *******
 
-1.8.8 (unreleased)
+1.8.9 (2011-02-23)
 ==================
 
 - Nothing changed yet.
