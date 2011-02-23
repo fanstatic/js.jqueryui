@@ -36,5 +36,13 @@ setup(
         'fanstatic.libraries': [
             'jqueryui = js.jqueryui:library',
             ],
+        'console_scripts': [
+            'download_jqueryui = js.jqueryui.download:main'],
         },
+        extras_require={
+            'scripts': [
+                'lxml',
+                'argparse',
+            ],
+        }
     )
