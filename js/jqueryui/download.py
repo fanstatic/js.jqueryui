@@ -3,7 +3,10 @@ import argparse
 from lxml import etree
 import zipfile
 import StringIO
-import simplejson
+try:
+    import json
+except ImportError:
+    import simplejson as json
 import pkg_resources
 import shutil
 import os
@@ -34,7 +37,7 @@ The procedure for updating js.jqueryui may change with the next release.
 
     dep_js = download_page_html.find('//div[@id="content-wrapper"]//script').text
     dep_json = dep_js[dep_js.find('{'):dep_js.find('}') + 1].replace("'", '"')
-    dep_info = simplejson.loads(dep_json)
+    dep_info = json.loads(dep_json)
 
     temp_download = tempfile.mkdtemp()
 
