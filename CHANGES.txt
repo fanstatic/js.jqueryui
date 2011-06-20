@@ -4,7 +4,7 @@ CHANGES
 1.8.14 (unreleased)
 ===================
 
-- Nothing changed yet.
+- Added the i18n resources.
 
 
 1.8.13 (2011-06-10)

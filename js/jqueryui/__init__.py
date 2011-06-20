@@ -33,3 +33,8 @@ trontastic = Resource(library, 'themes/trontastic/jquery-ui.css')
 ui_darkness = Resource(library, 'themes/ui-darkness/jquery-ui.css')
 ui_lightness = Resource(library, 'themes/ui-lightness/jquery-ui.css')
 vader = Resource(library, 'themes/vader/jquery-ui.css')
+
+jqueryui_i18n = Resource(library, 'ui/i18n/jquery-ui-i18n.js',
+    minified='ui/minified/i18n/jquery-ui-i18n.min.js',
+    depends=[js.jquery.jquery, jqueryui])
+
