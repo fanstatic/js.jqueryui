@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '1.8.14dev'
+version = '1.8.16dev'
 
 def read(*rnames):
     return open(os.path.join(os.path.dirname(__file__), *rnames)).read()
@@ -42,7 +42,6 @@ setup(
         extras_require={
             'scripts': [
                 'lxml',
-                'argparse',
             ],
         }
     )

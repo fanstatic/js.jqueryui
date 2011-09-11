@@ -1,10 +1,15 @@
 CHANGES
 *******
 
-1.8.14 (unreleased)
+1.8.16 (unreleased)
 ===================
 
-- Nothing changed yet.
+- Update to 1.8.16
+
+- Rewrite download script.  Now javascript as well as themeroller themes
+  are downloaded from the on-line download builder.   Additionally,
+  the download script builds the declarations for individual ui
+  and effects components.
 
 
 1.8.13-1 (2011-06-22)
