@@ -11,6 +11,8 @@ CHANGES
   the download script builds the declarations for individual ui
   and effects components.
 
+- A minified version of the rollup CSS file is now included for for all
+  themes.
 
 1.8.13-1 (2011-06-22)
 =====================

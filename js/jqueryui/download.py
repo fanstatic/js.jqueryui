@@ -14,9 +14,7 @@ import tempfile
 import re
 
 jqueryui_download_url = 'http://jqueryui.com/download'
-
-# FIXME: minimized i18n js
-# FIXME: minimized base css
+online_yui_compressor_url = 'http://www.refresh-sf.com/yui/'
 
 # We're not using fanstatic.codegen because:
 #
@@ -185,6 +183,45 @@ def download(dest_dir):
 
 ################################################################
 
+def yui_compress(infile, outfile):
+    """ Compress a source file using the online yui compressor
+    at http://www.refresh-sf.com/yui/.
+
+    :param string infile: The input file name.
+    :param string outfile: The output file name.
+    """
+    srctypes = {'.css': 'CSS', '.js': 'JS'}
+
+    _, ext = os.path.splitext(infile)
+    if ext not in srctypes:
+        raise ValueError("unknown file extension for file %r" % infile)
+
+    with file(infile, 'r') as fp:
+        input_text = fp.read()
+
+    # Preserve leading comment in compressed ouput
+    m = re.match(r'\A(\s*/\*)(?=\s)', input_text)
+    if m:
+        input_text = m.group(1) + '!' + input_text[m.end():]
+
+    postdata = urllib.urlencode({
+        'compresstext': input_text,
+        'type': srctypes[ext],
+        'redirect': 'on',
+        })
+
+    print 'compressing %r to %r' % (infile, outfile)
+    result = urllib.urlopen(online_yui_compressor_url, postdata)
+
+    output_dir = os.path.dirname(outfile)
+    if output_dir and not os.path.isdir(output_dir):
+        os.makedirs(output_dir)
+
+    with file(outfile, 'w') as outfp:
+        shutil.copyfileobj(result, outfp)
+
+################################################################
+
 class ResourceInfo(object):
     """ Information about a resource.
 
@@ -214,6 +251,9 @@ class ResourceInfo(object):
     is_minified
         True iff this is the minified version of a resource
 
+    want_minified
+        True iff we really like to have a minified version of this resource
+
     dependencies
         List of components this resource depends on.
 
@@ -226,6 +266,7 @@ class ResourceInfo(object):
                  section=None,
                  skip=False,
                  is_minified=False,
+                 want_minified=False,
                  dependencies=None,
                  rollup=None):
         self.relpath = relpath
@@ -234,6 +275,7 @@ class ResourceInfo(object):
         self.section = section
         self.skip = skip
         self.is_minified = is_minified
+        self.want_minified = want_minified
         self.dependencies = dependencies or []
         self.rollup = rollup
         if not self.skip:
@@ -348,6 +390,7 @@ def classifier_factory(jqueryui_dependencies):
     add_class(r'themes/([^/]+)/jquery-ui\.css',
               component = lambda m: os.path.join(m.group(1), 'jquery-ui.css'),
               name = lambda m: python_safe(m.group(1)),
+              want_minified = True,
               dependencies = [],
               rollup = None,
               section = SECTION_THEME,
@@ -369,22 +412,9 @@ def classifier_factory(jqueryui_dependencies):
     #
     add_class(r'themes/([^/]+)/jquery\.ui\.(all|base|core|theme)\.css',
               skip = True,
-              #component = lambda m: os.path.join(m.group(1), 'ui.', m.group(2) + '.css'),
-              #name = lambda m: python_safe(m.group(1) + '_ui_' + m.group(2)),
-              #dependencies = ['FIXME'],
-              #rollup = lambda m: os.path.join(m.group(1), 'jquery-ui.css'),
-              #section = SECTION_THEME,
               )
     add_class(r'themes/([^/]+)/jquery\.([^/]+)\.css',
               skip = True,
-              #component = lambda m: os.path.join(m.group(1), m.group(2) + '.css'),
-              #name = lambda m: python_safe(m.group(1) + '_' + m.group(2)),
-              #dependencies = lambda m: [ FIXME:
-              #    os.path.join(m.group(1), 'ui.core.css'),
-              #    os.path.join(m.group(1), 'ui.theme.css'),
-              #    ]
-              #rollup = lambda m: os.path.join(m.group(1), 'jquery-ui.css'),
-              #section = SECTION_THEME,
               )
 
     return classifier
@@ -416,6 +446,18 @@ def compile_resource_declarations(resources_dir):
             info_map[info.component] = info
             if info.rollup:
                 supersedes.setdefault(info.rollup, []).append(info.name)
+
+    # Compress resources for which we don't have minified versions
+    for info in info_map.values():
+        if info.want_minified and info.component not in minified:
+            # Don't put minified css in 'minified' subdir, so that we
+            # don't have to copy the 'images' subdirectory.
+            base, ext = os.path.splitext(info.relpath)
+            minpath = base + '.min' + ext
+            infile = os.path.join(resources_dir, info.relpath)
+            outfile = os.path.join(resources_dir, minpath)
+            yui_compress(infile, outfile)
+            minified[info.component] = minpath
 
     # Sorting
     #
