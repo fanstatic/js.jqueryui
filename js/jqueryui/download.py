@@ -113,12 +113,14 @@ class DownloadBuilder(object):
 
     def build(self, theme_name='No Theme', theme_params='none'):
         print 'downloading', theme_name
+        inputs = self.download_page_html.findall(
+            '//div[@id="download-builder-components"]//input')
         query = {
             'download': 'true',
             'theme': theme_params,
             't-name': theme_name,
             'ui-version': self.stable_version,
-            'files[]': self.jqueryui_dependencies.keys(),
+            'files[]': [input.attrib['value'] for input in inputs],
             }
         postdata = urllib.urlencode(query, doseq=True)
         theme_zip = urllib.urlopen(jqueryui_download_url, postdata).read()
