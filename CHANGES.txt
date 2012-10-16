@@ -9,6 +9,7 @@ CHANGES
 - Include experimental Twitter Bootstrap theme from
   http://addyosmani.github.com/jquery-ui-bootstrap/
 
+- Add ui_datepicker_locales dictionary.
 
 1.8.16-1 (2011-09-25)
 =====================
