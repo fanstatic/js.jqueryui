@@ -71,6 +71,7 @@ ui_datepicker_af = Resource(library, 'ui/i18n/jquery.ui.datepicker-af.js', depen
 ui_datepicker_ar = Resource(library, 'ui/i18n/jquery.ui.datepicker-ar.js', depends=[ui_datepicker])
 ui_datepicker_ar_DZ = Resource(library, 'ui/i18n/jquery.ui.datepicker-ar-DZ.js', depends=[ui_datepicker])
 ui_datepicker_az = Resource(library, 'ui/i18n/jquery.ui.datepicker-az.js', depends=[ui_datepicker])
+ui_datepicker_be = Resource(library, 'ui/i18n/jquery.ui.datepicker-be.js', depends=[ui_datepicker])
 ui_datepicker_bg = Resource(library, 'ui/i18n/jquery.ui.datepicker-bg.js', depends=[ui_datepicker])
 ui_datepicker_bs = Resource(library, 'ui/i18n/jquery.ui.datepicker-bs.js', depends=[ui_datepicker])
 ui_datepicker_ca = Resource(library, 'ui/i18n/jquery.ui.datepicker-ca.js', depends=[ui_datepicker])
@@ -90,6 +91,7 @@ ui_datepicker_fa = Resource(library, 'ui/i18n/jquery.ui.datepicker-fa.js', depen
 ui_datepicker_fi = Resource(library, 'ui/i18n/jquery.ui.datepicker-fi.js', depends=[ui_datepicker])
 ui_datepicker_fo = Resource(library, 'ui/i18n/jquery.ui.datepicker-fo.js', depends=[ui_datepicker])
 ui_datepicker_fr = Resource(library, 'ui/i18n/jquery.ui.datepicker-fr.js', depends=[ui_datepicker])
+ui_datepicker_fr_CA = Resource(library, 'ui/i18n/jquery.ui.datepicker-fr-CA.js', depends=[ui_datepicker])
 ui_datepicker_fr_CH = Resource(library, 'ui/i18n/jquery.ui.datepicker-fr-CH.js', depends=[ui_datepicker])
 ui_datepicker_gl = Resource(library, 'ui/i18n/jquery.ui.datepicker-gl.js', depends=[ui_datepicker])
 ui_datepicker_he = Resource(library, 'ui/i18n/jquery.ui.datepicker-he.js', depends=[ui_datepicker])
@@ -105,6 +107,7 @@ ui_datepicker_ka = Resource(library, 'ui/i18n/jquery.ui.datepicker-ka.js', depen
 ui_datepicker_kk = Resource(library, 'ui/i18n/jquery.ui.datepicker-kk.js', depends=[ui_datepicker])
 ui_datepicker_km = Resource(library, 'ui/i18n/jquery.ui.datepicker-km.js', depends=[ui_datepicker])
 ui_datepicker_ko = Resource(library, 'ui/i18n/jquery.ui.datepicker-ko.js', depends=[ui_datepicker])
+ui_datepicker_ky = Resource(library, 'ui/i18n/jquery.ui.datepicker-ky.js', depends=[ui_datepicker])
 ui_datepicker_kz = Resource(library, 'ui/i18n/jquery.ui.datepicker-kz.js', depends=[ui_datepicker])
 ui_datepicker_lb = Resource(library, 'ui/i18n/jquery.ui.datepicker-lb.js', depends=[ui_datepicker])
 ui_datepicker_lt = Resource(library, 'ui/i18n/jquery.ui.datepicker-lt.js', depends=[ui_datepicker])
@@ -112,9 +115,11 @@ ui_datepicker_lv = Resource(library, 'ui/i18n/jquery.ui.datepicker-lv.js', depen
 ui_datepicker_mk = Resource(library, 'ui/i18n/jquery.ui.datepicker-mk.js', depends=[ui_datepicker])
 ui_datepicker_ml = Resource(library, 'ui/i18n/jquery.ui.datepicker-ml.js', depends=[ui_datepicker])
 ui_datepicker_ms = Resource(library, 'ui/i18n/jquery.ui.datepicker-ms.js', depends=[ui_datepicker])
+ui_datepicker_nb = Resource(library, 'ui/i18n/jquery.ui.datepicker-nb.js', depends=[ui_datepicker])
 ui_datepicker_nl = Resource(library, 'ui/i18n/jquery.ui.datepicker-nl.js', depends=[ui_datepicker])
 ui_datepicker_nl_BE = Resource(library, 'ui/i18n/jquery.ui.datepicker-nl-BE.js', depends=[ui_datepicker])
 ui_datepicker_no = Resource(library, 'ui/i18n/jquery.ui.datepicker-no.js', depends=[ui_datepicker])
+ui_datepicker_nn = Resource(library, 'ui/i18n/jquery.ui.datepicker-nn.js', depends=[ui_datepicker])
 ui_datepicker_pl = Resource(library, 'ui/i18n/jquery.ui.datepicker-pl.js', depends=[ui_datepicker])
 ui_datepicker_pt = Resource(library, 'ui/i18n/jquery.ui.datepicker-pt.js', depends=[ui_datepicker])
 ui_datepicker_pt_BR = Resource(library, 'ui/i18n/jquery.ui.datepicker-pt-BR.js', depends=[ui_datepicker])
@@ -143,6 +148,7 @@ ui_datepicker_locales = {
     "ar": ui_datepicker_ar,
     "ar_DZ": ui_datepicker_ar_DZ,
     "az": ui_datepicker_az,
+    "be": ui_datepicker_be,
     "bg": ui_datepicker_bg,
     "bs": ui_datepicker_bs,
     "ca": ui_datepicker_ca,
@@ -162,6 +168,7 @@ ui_datepicker_locales = {
     "fi": ui_datepicker_fi,
     "fo": ui_datepicker_fo,
     "fr": ui_datepicker_fr,
+    "fr_CA": ui_datepicker_fr_CA,
     "fr_CH": ui_datepicker_fr_CH,
     "gl": ui_datepicker_gl,
     "he": ui_datepicker_he,
@@ -177,6 +184,7 @@ ui_datepicker_locales = {
     "kk": ui_datepicker_kk,
     "km": ui_datepicker_km,
     "ko": ui_datepicker_ko,
+    "ky": ui_datepicker_ky,
     "kz": ui_datepicker_kz,
     "lb": ui_datepicker_lb,
     "lt": ui_datepicker_lt,
@@ -184,8 +192,10 @@ ui_datepicker_locales = {
     "mk": ui_datepicker_mk,
     "ml": ui_datepicker_ml,
     "ms": ui_datepicker_ms,
+    "nb": ui_datepicker_nb,
     "nl": ui_datepicker_nl,
     "nl_BE": ui_datepicker_nl_BE,
+    "nn": ui_datepicker_nn,
     "no": ui_datepicker_no,
     "pl": ui_datepicker_pl,
     "pt": ui_datepicker_pt,
