@@ -60,6 +60,11 @@ ui_droppable = Resource(
     'ui/jquery.ui.droppable.js',
     depends=[ui_core, ui_draggable, ui_mouse, ui_widget],
     minified='ui/minified/jquery.ui.droppable.min.js')
+ui_menu = Resource(
+    library,
+    'ui/jquery.ui.menu.js',
+    depends=[ui_core, ui_widget, ui_position],
+    minified='ui/minified/jquery.ui.menu.min.js')
 ui_progressbar = Resource(
     library,
     'ui/jquery.ui.progressbar.js',
@@ -85,11 +90,21 @@ ui_sortable = Resource(
     'ui/jquery.ui.sortable.js',
     depends=[ui_core, ui_mouse, ui_widget],
     minified='ui/minified/jquery.ui.sortable.min.js')
+ui_spinner = Resource(
+    library,
+    'ui/jquery.ui.spinner.js',
+    depends=[ui_core, ui_widget, ui_button],
+    minified='ui/minified/jquery.ui.spinner.min.js')
 ui_tabs = Resource(
     library,
     'ui/jquery.ui.tabs.js',
     depends=[ui_core, ui_widget],
     minified='ui/minified/jquery.ui.tabs.min.js')
+ui_tooltip = Resource(
+    library,
+    'ui/jquery.ui.tooltip.js',
+    depends=[ui_core, ui_widget, ui_position],
+    minified='ui/minified/jquery.ui.tooltip.min.js')
 
 effects_core = Resource(
     library,
@@ -172,9 +187,9 @@ jqueryui = Resource(
                 effects_highlight, effects_pulsate, effects_scale,
                 effects_shake, effects_slide, effects_transfer, ui_accordion,
                 ui_autocomplete, ui_button, ui_core, ui_datepicker, ui_dialog,
-                ui_draggable, ui_droppable, ui_mouse, ui_position,
+                ui_draggable, ui_droppable, ui_menu, ui_mouse, ui_position,
                 ui_progressbar, ui_resizable, ui_selectable, ui_slider,
-                ui_sortable, ui_tabs, ui_widget])
+                ui_sortable, ui_spinner, ui_tabs, ui_tooltip, ui_widget])
 
 base = Resource(
     library,
