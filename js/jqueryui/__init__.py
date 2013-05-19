@@ -25,6 +25,11 @@ ui_widget = Resource(
     'ui/jquery.ui.widget.js',
     depends=[js.jquery.jquery],
     minified='ui/minified/jquery.ui.widget.min.js')
+ui_menu = Resource(
+    library,
+    'ui/jquery.ui.menu.js',
+    depends=[ui_core, ui_widget, ui_position],
+    minified='ui/minified/jquery.ui.menu.min.js')
 ui_accordion = Resource(
     library,
     'ui/jquery.ui.accordion.js',
@@ -33,7 +38,7 @@ ui_accordion = Resource(
 ui_autocomplete = Resource(
     library,
     'ui/jquery.ui.autocomplete.js',
-    depends=[ui_core, ui_position, ui_widget],
+    depends=[ui_core, ui_position, ui_widget, ui_menu],
     minified='ui/minified/jquery.ui.autocomplete.min.js')
 ui_button = Resource(
     library,
@@ -60,11 +65,6 @@ ui_droppable = Resource(
     'ui/jquery.ui.droppable.js',
     depends=[ui_core, ui_draggable, ui_mouse, ui_widget],
     minified='ui/minified/jquery.ui.droppable.min.js')
-ui_menu = Resource(
-    library,
-    'ui/jquery.ui.menu.js',
-    depends=[ui_core, ui_widget, ui_position],
-    minified='ui/minified/jquery.ui.menu.min.js')
 ui_progressbar = Resource(
     library,
     'ui/jquery.ui.progressbar.js',
