@@ -108,74 +108,74 @@ ui_tooltip = Resource(
 
 effects_core = Resource(
     library,
-    'ui/jquery.effects.core.js',
+    'ui/jquery.ui.effects.js',
     depends=[js.jquery.jquery],
-    minified='ui/minified/jquery.effects.core.min.js')
+    minified='ui/minified/jquery.ui.effects.min.js')
 effects_blind = Resource(
     library,
-    'ui/jquery.effects.blind.js',
+    'ui/jquery.ui.effect-blind.js',
     depends=[effects_core],
-    minified='ui/minified/jquery.effects.blind.min.js')
+    minified='ui/minified/jquery.ui.effect-blind.min.js')
 effects_bounce = Resource(
     library,
-    'ui/jquery.effects.bounce.js',
+    'ui/jquery.ui.effect-bounce.js',
     depends=[effects_core],
-    minified='ui/minified/jquery.effects.bounce.min.js')
+    minified='ui/minified/jquery.ui.effect-bounce.min.js')
 effects_clip = Resource(
     library,
-    'ui/jquery.effects.clip.js',
+    'ui/jquery.ui.effect-clip.js',
     depends=[effects_core],
-    minified='ui/minified/jquery.effects.clip.min.js')
+    minified='ui/minified/jquery.ui.effect-clip.min.js')
 effects_drop = Resource(
     library,
-    'ui/jquery.effects.drop.js',
+    'ui/jquery.ui.effect-drop.js',
     depends=[effects_core],
-    minified='ui/minified/jquery.effects.drop.min.js')
+    minified='ui/minified/jquery.ui.effect-drop.min.js')
 effects_explode = Resource(
     library,
-    'ui/jquery.effects.explode.js',
+    'ui/jquery.ui.effect-explode.js',
     depends=[effects_core],
-    minified='ui/minified/jquery.effects.explode.min.js')
+    minified='ui/minified/jquery.ui.effect-explode.min.js')
 effects_fade = Resource(
     library,
-    'ui/jquery.effects.fade.js',
+    'ui/jquery.ui.effect-fade.js',
     depends=[effects_core],
-    minified='ui/minified/jquery.effects.fade.min.js')
+    minified='ui/minified/jquery.ui.effect-fade.min.js')
 effects_fold = Resource(
     library,
-    'ui/jquery.effects.fold.js',
+    'ui/jquery.ui.effect-fold.js',
     depends=[effects_core],
-    minified='ui/minified/jquery.effects.fold.min.js')
+    minified='ui/minified/jquery.ui.effect-fold.min.js')
 effects_highlight = Resource(
     library,
-    'ui/jquery.effects.highlight.js',
+    'ui/jquery.ui.effect-highlight.js',
     depends=[effects_core],
-    minified='ui/minified/jquery.effects.highlight.min.js')
+    minified='ui/minified/jquery.ui.effect-highlight.min.js')
 effects_pulsate = Resource(
     library,
-    'ui/jquery.effects.pulsate.js',
+    'ui/jquery.ui.effect-pulsate.js',
     depends=[effects_core],
-    minified='ui/minified/jquery.effects.pulsate.min.js')
+    minified='ui/minified/jquery.ui.effect-pulsate.min.js')
 effects_scale = Resource(
     library,
-    'ui/jquery.effects.scale.js',
+    'ui/jquery.ui.effect-scale.js',
     depends=[effects_core],
-    minified='ui/minified/jquery.effects.scale.min.js')
+    minified='ui/minified/jquery.ui.effect-scale.min.js')
 effects_shake = Resource(
     library,
-    'ui/jquery.effects.shake.js',
+    'ui/jquery.ui.effect-shake.js',
     depends=[effects_core],
-    minified='ui/minified/jquery.effects.shake.min.js')
+    minified='ui/minified/jquery.ui.effect-shake.min.js')
 effects_slide = Resource(
     library,
-    'ui/jquery.effects.slide.js',
+    'ui/jquery.ui.effect-slide.js',
     depends=[effects_core],
-    minified='ui/minified/jquery.effects.slide.min.js')
+    minified='ui/minified/jquery.ui.effect-slide.min.js')
 effects_transfer = Resource(
     library,
-    'ui/jquery.effects.transfer.js',
+    'ui/jquery.ui.effect-transfer.js',
     depends=[effects_core],
-    minified='ui/minified/jquery.effects.transfer.min.js')
+    minified='ui/minified/jquery.ui.effect-transfer.min.js')
 
 jqueryui = Resource(
     library,
