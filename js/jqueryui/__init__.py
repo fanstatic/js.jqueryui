@@ -108,9 +108,9 @@ ui_tooltip = Resource(
 
 effects_core = Resource(
     library,
-    'ui/jquery.ui.effects.js',
+    'ui/jquery.ui.effect.js',
     depends=[js.jquery.jquery],
-    minified='ui/minified/jquery.ui.effects.min.js')
+    minified='ui/minified/jquery.ui.effect.min.js')
 effects_blind = Resource(
     library,
     'ui/jquery.ui.effect-blind.js',

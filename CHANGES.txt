@@ -1,6 +1,21 @@
 CHANGES
 *******
 
+1.10.3dev (2013-05-19)
+======================
+
+- Update to 1.10.3 (including new translations).
+
+- Add minified versions of all translations.
+
+- Add new resources: ui_menu, ui_spinner, ui_tooltip.
+
+- Change the filenames of the separate effect resources to match those
+  of the jQueryUI distribution.
+
+- Update Twitter Bootstrap theme to 0.5.
+
+
 1.8.24 (2012-10-16)
 ===================
 
