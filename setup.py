@@ -10,17 +10,17 @@ def read(*rnames):
         return f.read()
 
 
-long_description = (
-    read('README.txt')
-    + '\n' +
-    read('js', 'jqueryui', 'test_jqueryui.txt')
-    + '\n' +
-    read('CHANGES.txt'))
+long_description = "\n\n".join([
+    read('README.rst'),
+    read('js', 'jqueryui', 'test_jqueryui.rst'),
+    read('CHANGES.rst'),
+])
+
 
 setup(
     name='js.jqueryui',
     version=version,
-    description="fanstatic jQuery UI.",
+    description="jQuery UI packaged for fanstatic.",
     long_description=long_description,
     classifiers=[],
     url='https://bitbucket.org/fanstatic/js.jqueryui',
