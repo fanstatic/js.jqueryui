@@ -9,6 +9,10 @@ CHANGES
 - Drop experimental Bootstrap theme added in 1.8.24. (If needed it deserves a
   separate package.)
 
+- *Caution* The modules of jQueryUI no longer exist as fanstatic resources,
+  there is only the bundled jquery-ui.js (plus translations and themes).
+  It was too difficult to keep the dependencies between the files correct.
+
 
 1.10.3 (2013-05-19)
 ===================

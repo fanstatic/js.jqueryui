@@ -30,5 +30,4 @@ In `Pyramid`_ you could e.g. do something like this::
     if locale_name in ui_datepicker_locales:
         ui_datepicker_locales[locale_name].need()
 
-.. _`jQuery UI Bootstrap theme`: http://addyosmani.github.com/jquery-ui-bootstrap/
 .. _`Pyramid`: http://www.pylonsproject.org

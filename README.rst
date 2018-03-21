@@ -17,6 +17,9 @@ directory in ``js.jqueryui``) are published to some URL.
 Update this package
 ===================
 
+.. XXX --> keine einzelnen JS-Dateien mehr, auflösem der Abhängigkeiten funktioniert nicht automatisch!
+
+
 * Remove the contents of `js/jquerui/resources/`.
 * Create a directory `js/jquerui/resources/ui/`.
 * Download the stable release from http://jqueryui.com/download/. Do not use
@@ -28,7 +31,7 @@ Update this package
   `js/jquerui/resources/`.
 * Download the latest release from
   https://github.com/jquery/jquery-ui/releases.
-* Copy the contents of the `ui` directory to `js/jquerui/resources/ui/`.
+* Copy the directory `ui/i18n` to `js/jquerui/resources/ui/`.
 * Install thhe following packages using ``npm``:
 
     * uglify-js
