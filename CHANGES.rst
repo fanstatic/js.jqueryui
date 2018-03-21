@@ -1,10 +1,14 @@
 CHANGES
 *******
 
-1.10.4dev (unreleased)
+1.12.1dev (unreleased)
 ======================
 
-- No changes yet.
+- Update to 1.12.1.
+
+- Drop experimental Bootstrap theme added in 1.8.24. (If needed it deserves a
+  separate package.)
+
 
 1.10.3 (2013-05-19)
 ===================

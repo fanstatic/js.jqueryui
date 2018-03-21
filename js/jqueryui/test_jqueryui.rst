@@ -15,13 +15,6 @@ The themes in the jQuery UI themes distribution are included as well::
   >>> from js.jqueryui import black_tie
   >>> black_tie.need()
 
-In addition to the themes provided by jQuery UI itself, an experimental
-`jQuery UI Bootstrap theme`_ is included, that makes jQuery UI widgets
-look nice in a Twitter Bootstrap themed site::
-
-  >>> from js.jqueryui import bootstrap
-  >>> bootstrap.need()
-
 Locales
 -------
 

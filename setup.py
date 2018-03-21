@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '1.10.4dev'
+version = '1.12.1.dev0'
 
 
 def read(*rnames):
@@ -41,12 +41,5 @@ setup(
         'fanstatic.libraries': [
             'jqueryui = js.jqueryui:library',
         ],
-        'console_scripts': [
-            'download_jqueryui = js.jqueryui.download:main'],
     },
-    extras_require={
-        'scripts': [
-            'lxml',
-        ],
-    }
 )

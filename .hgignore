@@ -1,10 +1,12 @@
 syntax: glob
 
-bin
-parts
-.installed.cfg
 *.egg-info
 *.pyc
+.DS_Store
+.installed.cfg
+.mr.developer.cfg
+.pytest_cache/
+bin
 develop-eggs
 dist
-.mr.developer.cfg
+parts

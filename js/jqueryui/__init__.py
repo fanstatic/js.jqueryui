@@ -1,4 +1,4 @@
-from fanstatic import Library, Resource
+from fanstatic import Library, Resource, Group
 import js.jquery
 
 # This code is auto-generated and not PEP8 compliant
@@ -7,181 +7,181 @@ library = Library('jqueryui', 'resources')
 
 ui_core = Resource(
     library,
-    'ui/jquery.ui.core.js',
+    'ui/core.js',
     depends=[js.jquery.jquery],
-    minified='ui/minified/jquery.ui.core.min.js')
+    minified='ui/core.min.js')
 ui_datepicker = Resource(
     library,
-    'ui/jquery.ui.datepicker.js',
+    'ui/widgets/datepicker.js',
     depends=[ui_core],
-    minified='ui/minified/jquery.ui.datepicker.min.js')
+    minified='ui/widgets/datepicker.min.js')
 ui_position = Resource(
     library,
-    'ui/jquery.ui.position.js',
+    'ui/position.js',
     depends=[js.jquery.jquery],
-    minified='ui/minified/jquery.ui.position.min.js')
+    minified='ui/position.min.js')
 ui_widget = Resource(
     library,
-    'ui/jquery.ui.widget.js',
+    'ui/widget.js',
     depends=[js.jquery.jquery],
-    minified='ui/minified/jquery.ui.widget.min.js')
+    minified='ui/widget.min.js')
 ui_menu = Resource(
     library,
-    'ui/jquery.ui.menu.js',
+    'ui/widgets/menu.js',
     depends=[ui_core, ui_widget, ui_position],
-    minified='ui/minified/jquery.ui.menu.min.js')
+    minified='ui/widgets/menu.min.js')
 ui_accordion = Resource(
     library,
-    'ui/jquery.ui.accordion.js',
+    'ui/widgets/accordion.js',
     depends=[ui_core, ui_widget],
-    minified='ui/minified/jquery.ui.accordion.min.js')
+    minified='ui/widgets/accordion.min.js')
 ui_autocomplete = Resource(
     library,
-    'ui/jquery.ui.autocomplete.js',
+    'ui/widgets/autocomplete.js',
     depends=[ui_core, ui_position, ui_widget, ui_menu],
-    minified='ui/minified/jquery.ui.autocomplete.min.js')
+    minified='ui/widgets/autocomplete.min.js')
 ui_button = Resource(
     library,
-    'ui/jquery.ui.button.js',
+    'ui/widgets/button.js',
     depends=[ui_core, ui_widget],
-    minified='ui/minified/jquery.ui.button.min.js')
+    minified='ui/widgets/button.min.js')
 ui_dialog = Resource(
     library,
-    'ui/jquery.ui.dialog.js',
+    'ui/widgets/dialog.js',
     depends=[ui_core, ui_position, ui_widget],
-    minified='ui/minified/jquery.ui.dialog.min.js')
+    minified='ui/widgets/dialog.min.js')
 ui_mouse = Resource(
     library,
-    'ui/jquery.ui.mouse.js',
+    'ui/widgets/mouse.js',
     depends=[ui_core, ui_widget],
-    minified='ui/minified/jquery.ui.mouse.min.js')
+    minified='ui/widgets/mouse.min.js')
 ui_draggable = Resource(
     library,
-    'ui/jquery.ui.draggable.js',
+    'ui/widgets/draggable.js',
     depends=[ui_core, ui_mouse, ui_widget],
-    minified='ui/minified/jquery.ui.draggable.min.js')
+    minified='ui/widgets/draggable.min.js')
 ui_droppable = Resource(
     library,
-    'ui/jquery.ui.droppable.js',
+    'ui/widgets/droppable.js',
     depends=[ui_core, ui_draggable, ui_mouse, ui_widget],
-    minified='ui/minified/jquery.ui.droppable.min.js')
+    minified='ui/widgets/droppable.min.js')
 ui_progressbar = Resource(
     library,
-    'ui/jquery.ui.progressbar.js',
+    'ui/widgets/progressbar.js',
     depends=[ui_core, ui_widget],
-    minified='ui/minified/jquery.ui.progressbar.min.js')
+    minified='ui/widgets/progressbar.min.js')
 ui_resizable = Resource(
     library,
-    'ui/jquery.ui.resizable.js',
+    'ui/widgets/resizable.js',
     depends=[ui_core, ui_mouse, ui_widget],
-    minified='ui/minified/jquery.ui.resizable.min.js')
+    minified='ui/widgets/resizable.min.js')
 ui_selectable = Resource(
     library,
-    'ui/jquery.ui.selectable.js',
+    'ui/widgets/selectable.js',
     depends=[ui_core, ui_mouse, ui_widget],
-    minified='ui/minified/jquery.ui.selectable.min.js')
+    minified='ui/widgets/selectable.min.js')
 ui_slider = Resource(
     library,
-    'ui/jquery.ui.slider.js',
+    'ui/widgets/slider.js',
     depends=[ui_core, ui_mouse, ui_widget],
-    minified='ui/minified/jquery.ui.slider.min.js')
+    minified='ui/widgets/slider.min.js')
 ui_sortable = Resource(
     library,
-    'ui/jquery.ui.sortable.js',
+    'ui/widgets/sortable.js',
     depends=[ui_core, ui_mouse, ui_widget],
-    minified='ui/minified/jquery.ui.sortable.min.js')
+    minified='ui/widgets/sortable.min.js')
 ui_spinner = Resource(
     library,
-    'ui/jquery.ui.spinner.js',
+    'ui/widgets/spinner.js',
     depends=[ui_core, ui_widget, ui_button],
-    minified='ui/minified/jquery.ui.spinner.min.js')
+    minified='ui/widgets/spinner.min.js')
 ui_tabs = Resource(
     library,
-    'ui/jquery.ui.tabs.js',
+    'ui/widgets/tabs.js',
     depends=[ui_core, ui_widget],
-    minified='ui/minified/jquery.ui.tabs.min.js')
+    minified='ui/widgets/tabs.min.js')
 ui_tooltip = Resource(
     library,
-    'ui/jquery.ui.tooltip.js',
+    'ui/widgets/tooltip.js',
     depends=[ui_core, ui_widget, ui_position],
-    minified='ui/minified/jquery.ui.tooltip.min.js')
+    minified='ui/widgets/tooltip.min.js')
 
 effects_core = Resource(
     library,
-    'ui/jquery.ui.effect.js',
+    'ui/effect.js',
     depends=[js.jquery.jquery],
-    minified='ui/minified/jquery.ui.effect.min.js')
+    minified='ui/effect.min.js')
 effects_blind = Resource(
     library,
-    'ui/jquery.ui.effect-blind.js',
+    'ui/effects/effect-blind.js',
     depends=[effects_core],
-    minified='ui/minified/jquery.ui.effect-blind.min.js')
+    minified='ui/effects/effect-blind.min.js')
 effects_bounce = Resource(
     library,
-    'ui/jquery.ui.effect-bounce.js',
+    'ui/effects/effect-bounce.js',
     depends=[effects_core],
-    minified='ui/minified/jquery.ui.effect-bounce.min.js')
+    minified='ui/effects/effect-bounce.min.js')
 effects_clip = Resource(
     library,
-    'ui/jquery.ui.effect-clip.js',
+    'ui/effects/effect-clip.js',
     depends=[effects_core],
-    minified='ui/minified/jquery.ui.effect-clip.min.js')
+    minified='ui/effects/effect-clip.min.js')
 effects_drop = Resource(
     library,
-    'ui/jquery.ui.effect-drop.js',
+    'ui/effects/effect-drop.js',
     depends=[effects_core],
-    minified='ui/minified/jquery.ui.effect-drop.min.js')
+    minified='ui/effects/effect-drop.min.js')
 effects_explode = Resource(
     library,
-    'ui/jquery.ui.effect-explode.js',
+    'ui/effects/effect-explode.js',
     depends=[effects_core],
-    minified='ui/minified/jquery.ui.effect-explode.min.js')
+    minified='ui/effects/effect-explode.min.js')
 effects_fade = Resource(
     library,
-    'ui/jquery.ui.effect-fade.js',
+    'ui/effects/effect-fade.js',
     depends=[effects_core],
-    minified='ui/minified/jquery.ui.effect-fade.min.js')
+    minified='ui/effects/effect-fade.min.js')
 effects_fold = Resource(
     library,
-    'ui/jquery.ui.effect-fold.js',
+    'ui/effects/effect-fold.js',
     depends=[effects_core],
-    minified='ui/minified/jquery.ui.effect-fold.min.js')
+    minified='ui/effects/effect-fold.min.js')
 effects_highlight = Resource(
     library,
-    'ui/jquery.ui.effect-highlight.js',
+    'ui/effects/effect-highlight.js',
     depends=[effects_core],
-    minified='ui/minified/jquery.ui.effect-highlight.min.js')
+    minified='ui/effects/effect-highlight.min.js')
 effects_pulsate = Resource(
     library,
-    'ui/jquery.ui.effect-pulsate.js',
+    'ui/effects/effect-pulsate.js',
     depends=[effects_core],
-    minified='ui/minified/jquery.ui.effect-pulsate.min.js')
+    minified='ui/effects/effect-pulsate.min.js')
 effects_scale = Resource(
     library,
-    'ui/jquery.ui.effect-scale.js',
+    'ui/effects/effect-scale.js',
     depends=[effects_core],
-    minified='ui/minified/jquery.ui.effect-scale.min.js')
+    minified='ui/effects/effect-scale.min.js')
 effects_shake = Resource(
     library,
-    'ui/jquery.ui.effect-shake.js',
+    'ui/effects/effect-shake.js',
     depends=[effects_core],
-    minified='ui/minified/jquery.ui.effect-shake.min.js')
+    minified='ui/effects/effect-shake.min.js')
 effects_slide = Resource(
     library,
-    'ui/jquery.ui.effect-slide.js',
+    'ui/effects/effect-slide.js',
     depends=[effects_core],
-    minified='ui/minified/jquery.ui.effect-slide.min.js')
+    minified='ui/effects/effect-slide.min.js')
 effects_transfer = Resource(
     library,
-    'ui/jquery.ui.effect-transfer.js',
+    'ui/effects/effect-transfer.js',
     depends=[effects_core],
-    minified='ui/minified/jquery.ui.effect-transfer.min.js')
+    minified='ui/effects/effect-transfer.min.js')
 
 jqueryui = Resource(
     library,
     'ui/jquery-ui.js',
     depends=[js.jquery.jquery],
-    minified='ui/minified/jquery-ui.min.js',
+    minified='ui/jquery-ui.min.js',
     supersedes=[effects_blind, effects_bounce, effects_clip, effects_core,
                 effects_drop, effects_explode, effects_fade, effects_fold,
                 effects_highlight, effects_pulsate, effects_scale,
@@ -203,10 +203,6 @@ blitzer = Resource(
     library,
     'themes/blitzer/jquery-ui.css',
     minified='themes/blitzer/jquery-ui.min.css')
-bootstrap = Resource(
-    library,
-    'themes/bootstrap/jquery-ui.css',
-    minified='themes/bootstrap/jquery-ui.min.css')
 cupertino = Resource(
     library,
     'themes/cupertino/jquery-ui.css',
@@ -298,402 +294,393 @@ vader = Resource(
 
 ui_datepicker_af = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-af.js',
-    minified='ui/i18n/jquery.ui.datepicker-af.min.js',
+    'ui/i18n/datepicker-af.js',
+    minified='ui/i18n/datepicker-af.min.js',
     depends=[ui_datepicker])
 ui_datepicker_ar = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-ar.js',
-    minified='ui/i18n/jquery.ui.datepicker-ar.min.js',
+    'ui/i18n/datepicker-ar.js',
+    minified='ui/i18n/datepicker-ar.min.js',
     depends=[ui_datepicker])
 ui_datepicker_ar_DZ = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-ar-DZ.js',
-    minified='ui/i18n/jquery.ui.datepicker-ar-DZ.min.js',
+    'ui/i18n/datepicker-ar-DZ.js',
+    minified='ui/i18n/datepicker-ar-DZ.min.js',
     depends=[ui_datepicker])
 ui_datepicker_az = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-az.js',
-    minified='ui/i18n/jquery.ui.datepicker-az.min.js',
+    'ui/i18n/datepicker-az.js',
+    minified='ui/i18n/datepicker-az.min.js',
     depends=[ui_datepicker])
 ui_datepicker_be = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-be.js',
-    minified='ui/i18n/jquery.ui.datepicker-be.min.js',
+    'ui/i18n/datepicker-be.js',
+    minified='ui/i18n/datepicker-be.min.js',
     depends=[ui_datepicker])
 ui_datepicker_bg = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-bg.js',
-    minified='ui/i18n/jquery.ui.datepicker-bg.min.js',
+    'ui/i18n/datepicker-bg.js',
+    minified='ui/i18n/datepicker-bg.min.js',
     depends=[ui_datepicker])
 ui_datepicker_bs = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-bs.js',
-    minified='ui/i18n/jquery.ui.datepicker-bs.min.js',
+    'ui/i18n/datepicker-bs.js',
+    minified='ui/i18n/datepicker-bs.min.js',
     depends=[ui_datepicker])
 ui_datepicker_ca = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-ca.js',
-    minified='ui/i18n/jquery.ui.datepicker-ca.min.js',
+    'ui/i18n/datepicker-ca.js',
+    minified='ui/i18n/datepicker-ca.min.js',
     depends=[ui_datepicker])
 ui_datepicker_cs = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-cs.js',
-    minified='ui/i18n/jquery.ui.datepicker-cs.min.js',
+    'ui/i18n/datepicker-cs.js',
+    minified='ui/i18n/datepicker-cs.min.js',
     depends=[ui_datepicker])
 ui_datepicker_cy_GB = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-cy-GB.js',
-    minified='ui/i18n/jquery.ui.datepicker-cy-GB.min.js',
+    'ui/i18n/datepicker-cy-GB.js',
+    minified='ui/i18n/datepicker-cy-GB.min.js',
     depends=[ui_datepicker])
 ui_datepicker_da = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-da.js',
-    minified='ui/i18n/jquery.ui.datepicker-da.min.js',
+    'ui/i18n/datepicker-da.js',
+    minified='ui/i18n/datepicker-da.min.js',
     depends=[ui_datepicker])
 ui_datepicker_de = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-de.js',
-    minified='ui/i18n/jquery.ui.datepicker-de.min.js',
+    'ui/i18n/datepicker-de.js',
+    minified='ui/i18n/datepicker-de.min.js',
     depends=[ui_datepicker])
 ui_datepicker_el = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-el.js',
-    minified='ui/i18n/jquery.ui.datepicker-el.min.js',
+    'ui/i18n/datepicker-el.js',
+    minified='ui/i18n/datepicker-el.min.js',
     depends=[ui_datepicker])
 ui_datepicker_en_AU = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-en-AU.js',
-    minified='ui/i18n/jquery.ui.datepicker-en-AU.min.js',
+    'ui/i18n/datepicker-en-AU.js',
+    minified='ui/i18n/datepicker-en-AU.min.js',
     depends=[ui_datepicker])
 ui_datepicker_en_GB = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-en-GB.js',
-    minified='ui/i18n/jquery.ui.datepicker-en-GB.min.js',
+    'ui/i18n/datepicker-en-GB.js',
+    minified='ui/i18n/datepicker-en-GB.min.js',
     depends=[ui_datepicker])
 ui_datepicker_en_NZ = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-en-NZ.js',
-    minified='ui/i18n/jquery.ui.datepicker-en-NZ.min.js',
+    'ui/i18n/datepicker-en-NZ.js',
+    minified='ui/i18n/datepicker-en-NZ.min.js',
     depends=[ui_datepicker])
 ui_datepicker_eo = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-eo.js',
-    minified='ui/i18n/jquery.ui.datepicker-eo.min.js',
+    'ui/i18n/datepicker-eo.js',
+    minified='ui/i18n/datepicker-eo.min.js',
     depends=[ui_datepicker])
 ui_datepicker_es = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-es.js',
-    minified='ui/i18n/jquery.ui.datepicker-es.min.js',
+    'ui/i18n/datepicker-es.js',
+    minified='ui/i18n/datepicker-es.min.js',
     depends=[ui_datepicker])
 ui_datepicker_et = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-et.js',
-    minified='ui/i18n/jquery.ui.datepicker-et.min.js',
+    'ui/i18n/datepicker-et.js',
+    minified='ui/i18n/datepicker-et.min.js',
     depends=[ui_datepicker])
 ui_datepicker_eu = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-eu.js',
-    minified='ui/i18n/jquery.ui.datepicker-eu.min.js',
+    'ui/i18n/datepicker-eu.js',
+    minified='ui/i18n/datepicker-eu.min.js',
     depends=[ui_datepicker])
 ui_datepicker_fa = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-fa.js',
-    minified='ui/i18n/jquery.ui.datepicker-fa.min.js',
+    'ui/i18n/datepicker-fa.js',
+    minified='ui/i18n/datepicker-fa.min.js',
     depends=[ui_datepicker])
 ui_datepicker_fi = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-fi.js',
-    minified='ui/i18n/jquery.ui.datepicker-fi.min.js',
+    'ui/i18n/datepicker-fi.js',
+    minified='ui/i18n/datepicker-fi.min.js',
     depends=[ui_datepicker])
 ui_datepicker_fo = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-fo.js',
-    minified='ui/i18n/jquery.ui.datepicker-fo.min.js',
+    'ui/i18n/datepicker-fo.js',
+    minified='ui/i18n/datepicker-fo.min.js',
     depends=[ui_datepicker])
 ui_datepicker_fr = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-fr.js',
-    minified='ui/i18n/jquery.ui.datepicker-fr.min.js',
+    'ui/i18n/datepicker-fr.js',
+    minified='ui/i18n/datepicker-fr.min.js',
     depends=[ui_datepicker])
 ui_datepicker_fr_CA = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-fr-CA.js',
-    minified='ui/i18n/jquery.ui.datepicker-fr-CA.min.js',
+    'ui/i18n/datepicker-fr-CA.js',
+    minified='ui/i18n/datepicker-fr-CA.min.js',
     depends=[ui_datepicker])
 ui_datepicker_fr_CH = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-fr-CH.js',
-    minified='ui/i18n/jquery.ui.datepicker-fr-CH.min.js',
+    'ui/i18n/datepicker-fr-CH.js',
+    minified='ui/i18n/datepicker-fr-CH.min.js',
     depends=[ui_datepicker])
 ui_datepicker_gl = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-gl.js',
-    minified='ui/i18n/jquery.ui.datepicker-gl.min.js',
+    'ui/i18n/datepicker-gl.js',
+    minified='ui/i18n/datepicker-gl.min.js',
     depends=[ui_datepicker])
 ui_datepicker_he = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-he.js',
-    minified='ui/i18n/jquery.ui.datepicker-he.min.js',
+    'ui/i18n/datepicker-he.js',
+    minified='ui/i18n/datepicker-he.min.js',
     depends=[ui_datepicker])
 ui_datepicker_hi = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-hi.js',
-    minified='ui/i18n/jquery.ui.datepicker-hi.min.js',
+    'ui/i18n/datepicker-hi.js',
+    minified='ui/i18n/datepicker-hi.min.js',
     depends=[ui_datepicker])
 ui_datepicker_hr = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-hr.js',
-    minified='ui/i18n/jquery.ui.datepicker-hr.min.js',
+    'ui/i18n/datepicker-hr.js',
+    minified='ui/i18n/datepicker-hr.min.js',
     depends=[ui_datepicker])
 ui_datepicker_hu = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-hu.js',
-    minified='ui/i18n/jquery.ui.datepicker-hu.min.js',
+    'ui/i18n/datepicker-hu.js',
+    minified='ui/i18n/datepicker-hu.min.js',
     depends=[ui_datepicker])
 ui_datepicker_hy = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-hy.js',
-    minified='ui/i18n/jquery.ui.datepicker-hy.min.js',
+    'ui/i18n/datepicker-hy.js',
+    minified='ui/i18n/datepicker-hy.min.js',
     depends=[ui_datepicker])
 ui_datepicker_id = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-id.js',
-    minified='ui/i18n/jquery.ui.datepicker-id.min.js',
+    'ui/i18n/datepicker-id.js',
+    minified='ui/i18n/datepicker-id.min.js',
     depends=[ui_datepicker])
 ui_datepicker_is = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-is.js',
-    minified='ui/i18n/jquery.ui.datepicker-is.min.js',
+    'ui/i18n/datepicker-is.js',
+    minified='ui/i18n/datepicker-is.min.js',
     depends=[ui_datepicker])
 ui_datepicker_it = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-it.js',
-    minified='ui/i18n/jquery.ui.datepicker-it.min.js',
+    'ui/i18n/datepicker-it.js',
+    minified='ui/i18n/datepicker-it.min.js',
     depends=[ui_datepicker])
 ui_datepicker_ja = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-ja.js',
-    minified='ui/i18n/jquery.ui.datepicker-ja.min.js',
+    'ui/i18n/datepicker-ja.js',
+    minified='ui/i18n/datepicker-ja.min.js',
     depends=[ui_datepicker])
 ui_datepicker_ka = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-ka.js',
-    minified='ui/i18n/jquery.ui.datepicker-ka.min.js',
+    'ui/i18n/datepicker-ka.js',
+    minified='ui/i18n/datepicker-ka.min.js',
     depends=[ui_datepicker])
 ui_datepicker_kk = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-kk.js',
-    minified='ui/i18n/jquery.ui.datepicker-kk.min.js',
+    'ui/i18n/datepicker-kk.js',
+    minified='ui/i18n/datepicker-kk.min.js',
     depends=[ui_datepicker])
 ui_datepicker_km = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-km.js',
-    minified='ui/i18n/jquery.ui.datepicker-km.min.js',
+    'ui/i18n/datepicker-km.js',
+    minified='ui/i18n/datepicker-km.min.js',
     depends=[ui_datepicker])
 ui_datepicker_ko = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-ko.js',
-    minified='ui/i18n/jquery.ui.datepicker-ko.min.js',
+    'ui/i18n/datepicker-ko.js',
+    minified='ui/i18n/datepicker-ko.min.js',
     depends=[ui_datepicker])
 ui_datepicker_ky = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-ky.js',
-    minified='ui/i18n/jquery.ui.datepicker-ky.min.js',
-    depends=[ui_datepicker])
-ui_datepicker_kz = Resource(
-    library,
-    'ui/i18n/jquery.ui.datepicker-kz.js',
-    minified='ui/i18n/jquery.ui.datepicker-kz.min.js',
+    'ui/i18n/datepicker-ky.js',
+    minified='ui/i18n/datepicker-ky.min.js',
     depends=[ui_datepicker])
 ui_datepicker_lb = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-lb.js',
-    minified='ui/i18n/jquery.ui.datepicker-lb.min.js',
+    'ui/i18n/datepicker-lb.js',
+    minified='ui/i18n/datepicker-lb.min.js',
     depends=[ui_datepicker])
 ui_datepicker_lt = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-lt.js',
-    minified='ui/i18n/jquery.ui.datepicker-lt.min.js',
+    'ui/i18n/datepicker-lt.js',
+    minified='ui/i18n/datepicker-lt.min.js',
     depends=[ui_datepicker])
 ui_datepicker_lv = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-lv.js',
-    minified='ui/i18n/jquery.ui.datepicker-lv.min.js',
+    'ui/i18n/datepicker-lv.js',
+    minified='ui/i18n/datepicker-lv.min.js',
     depends=[ui_datepicker])
 ui_datepicker_mk = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-mk.js',
-    minified='ui/i18n/jquery.ui.datepicker-mk.min.js',
+    'ui/i18n/datepicker-mk.js',
+    minified='ui/i18n/datepicker-mk.min.js',
     depends=[ui_datepicker])
 ui_datepicker_ml = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-ml.js',
-    minified='ui/i18n/jquery.ui.datepicker-ml.min.js',
+    'ui/i18n/datepicker-ml.js',
+    minified='ui/i18n/datepicker-ml.min.js',
     depends=[ui_datepicker])
 ui_datepicker_ms = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-ms.js',
-    minified='ui/i18n/jquery.ui.datepicker-ms.min.js',
+    'ui/i18n/datepicker-ms.js',
+    minified='ui/i18n/datepicker-ms.min.js',
     depends=[ui_datepicker])
 ui_datepicker_nb = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-nb.js',
-    minified='ui/i18n/jquery.ui.datepicker-nb.min.js',
+    'ui/i18n/datepicker-nb.js',
+    minified='ui/i18n/datepicker-nb.min.js',
     depends=[ui_datepicker])
 ui_datepicker_nl = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-nl.js',
-    minified='ui/i18n/jquery.ui.datepicker-nl.min.js',
+    'ui/i18n/datepicker-nl.js',
+    minified='ui/i18n/datepicker-nl.min.js',
     depends=[ui_datepicker])
 ui_datepicker_nl_BE = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-nl-BE.js',
-    minified='ui/i18n/jquery.ui.datepicker-nl-BE.min.js',
+    'ui/i18n/datepicker-nl-BE.js',
+    minified='ui/i18n/datepicker-nl-BE.min.js',
     depends=[ui_datepicker])
 ui_datepicker_no = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-no.js',
-    minified='ui/i18n/jquery.ui.datepicker-no.min.js',
+    'ui/i18n/datepicker-no.js',
+    minified='ui/i18n/datepicker-no.min.js',
     depends=[ui_datepicker])
 ui_datepicker_nn = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-nn.js',
-    minified='ui/i18n/jquery.ui.datepicker-nn.min.js',
+    'ui/i18n/datepicker-nn.js',
+    minified='ui/i18n/datepicker-nn.min.js',
     depends=[ui_datepicker])
 ui_datepicker_pl = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-pl.js',
-    minified='ui/i18n/jquery.ui.datepicker-pl.min.js',
+    'ui/i18n/datepicker-pl.js',
+    minified='ui/i18n/datepicker-pl.min.js',
     depends=[ui_datepicker])
 ui_datepicker_pt = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-pt.js',
-    minified='ui/i18n/jquery.ui.datepicker-pt.min.js',
+    'ui/i18n/datepicker-pt.js',
+    minified='ui/i18n/datepicker-pt.min.js',
     depends=[ui_datepicker])
 ui_datepicker_pt_BR = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-pt-BR.js',
-    minified='ui/i18n/jquery.ui.datepicker-pt-BR.min.js',
+    'ui/i18n/datepicker-pt-BR.js',
+    minified='ui/i18n/datepicker-pt-BR.min.js',
     depends=[ui_datepicker])
 ui_datepicker_rm = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-rm.js',
-    minified='ui/i18n/jquery.ui.datepicker-rm.min.js',
+    'ui/i18n/datepicker-rm.js',
+    minified='ui/i18n/datepicker-rm.min.js',
     depends=[ui_datepicker])
 ui_datepicker_ro = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-ro.js',
-    minified='ui/i18n/jquery.ui.datepicker-ro.min.js',
+    'ui/i18n/datepicker-ro.js',
+    minified='ui/i18n/datepicker-ro.min.js',
     depends=[ui_datepicker])
 ui_datepicker_ru = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-ru.js',
-    minified='ui/i18n/jquery.ui.datepicker-ru.min.js',
+    'ui/i18n/datepicker-ru.js',
+    minified='ui/i18n/datepicker-ru.min.js',
     depends=[ui_datepicker])
 ui_datepicker_sk = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-sk.js',
-    minified='ui/i18n/jquery.ui.datepicker-sk.min.js',
+    'ui/i18n/datepicker-sk.js',
+    minified='ui/i18n/datepicker-sk.min.js',
     depends=[ui_datepicker])
 ui_datepicker_sl = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-sl.js',
-    minified='ui/i18n/jquery.ui.datepicker-sl.min.js',
+    'ui/i18n/datepicker-sl.js',
+    minified='ui/i18n/datepicker-sl.min.js',
     depends=[ui_datepicker])
 ui_datepicker_sq = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-sq.js',
-    minified='ui/i18n/jquery.ui.datepicker-sq.min.js',
+    'ui/i18n/datepicker-sq.js',
+    minified='ui/i18n/datepicker-sq.min.js',
     depends=[ui_datepicker])
 ui_datepicker_sr = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-sr.js',
-    minified='ui/i18n/jquery.ui.datepicker-sr.min.js',
+    'ui/i18n/datepicker-sr.js',
+    minified='ui/i18n/datepicker-sr.min.js',
     depends=[ui_datepicker])
 ui_datepicker_sr_SR = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-sr-SR.js',
-    minified='ui/i18n/jquery.ui.datepicker-sr-SR.min.js',
+    'ui/i18n/datepicker-sr-SR.js',
+    minified='ui/i18n/datepicker-sr-SR.min.js',
     depends=[ui_datepicker])
 ui_datepicker_sv = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-sv.js',
-    minified='ui/i18n/jquery.ui.datepicker-sv.min.js',
+    'ui/i18n/datepicker-sv.js',
+    minified='ui/i18n/datepicker-sv.min.js',
     depends=[ui_datepicker])
 ui_datepicker_ta = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-ta.js',
-    minified='ui/i18n/jquery.ui.datepicker-ta.min.js',
+    'ui/i18n/datepicker-ta.js',
+    minified='ui/i18n/datepicker-ta.min.js',
     depends=[ui_datepicker])
 ui_datepicker_th = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-th.js',
-    minified='ui/i18n/jquery.ui.datepicker-th.min.js',
+    'ui/i18n/datepicker-th.js',
+    minified='ui/i18n/datepicker-th.min.js',
     depends=[ui_datepicker])
 ui_datepicker_tj = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-tj.js',
-    minified='ui/i18n/jquery.ui.datepicker-tj.min.js',
+    'ui/i18n/datepicker-tj.js',
+    minified='ui/i18n/datepicker-tj.min.js',
     depends=[ui_datepicker])
 ui_datepicker_tr = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-tr.js',
-    minified='ui/i18n/jquery.ui.datepicker-tr.min.js',
+    'ui/i18n/datepicker-tr.js',
+    minified='ui/i18n/datepicker-tr.min.js',
     depends=[ui_datepicker])
 ui_datepicker_uk = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-uk.js',
-    minified='ui/i18n/jquery.ui.datepicker-uk.min.js',
+    'ui/i18n/datepicker-uk.js',
+    minified='ui/i18n/datepicker-uk.min.js',
     depends=[ui_datepicker])
 ui_datepicker_vi = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-vi.js',
-    minified='ui/i18n/jquery.ui.datepicker-vi.min.js',
+    'ui/i18n/datepicker-vi.js',
+    minified='ui/i18n/datepicker-vi.min.js',
     depends=[ui_datepicker])
 ui_datepicker_zh_CN = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-zh-CN.js',
-    minified='ui/i18n/jquery.ui.datepicker-zh-CN.min.js',
+    'ui/i18n/datepicker-zh-CN.js',
+    minified='ui/i18n/datepicker-zh-CN.min.js',
     depends=[ui_datepicker])
 ui_datepicker_zh_HK = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-zh-HK.js',
-    minified='ui/i18n/jquery.ui.datepicker-zh-HK.min.js',
+    'ui/i18n/datepicker-zh-HK.js',
+    minified='ui/i18n/datepicker-zh-HK.min.js',
     depends=[ui_datepicker])
 ui_datepicker_zh_TW = Resource(
     library,
-    'ui/i18n/jquery.ui.datepicker-zh-TW.js',
-    minified='ui/i18n/jquery.ui.datepicker-zh-TW.min.js',
+    'ui/i18n/datepicker-zh-TW.js',
+    minified='ui/i18n/datepicker-zh-TW.min.js',
     depends=[ui_datepicker])
-jqueryui_i18n = Resource(
-    library,
-    'ui/i18n/jquery-ui-i18n.js',
-    minified='ui/i18n/jquery-ui-i18n.min.js',
-    depends=[ui_datepicker],
-    supersedes=[ui_datepicker_af, ui_datepicker_ar, ui_datepicker_ar_DZ,
-                ui_datepicker_az, ui_datepicker_bg, ui_datepicker_bs,
-                ui_datepicker_ca, ui_datepicker_cs, ui_datepicker_da,
-                ui_datepicker_de, ui_datepicker_el, ui_datepicker_en_AU,
-                ui_datepicker_en_GB, ui_datepicker_en_NZ, ui_datepicker_eo,
-                ui_datepicker_es, ui_datepicker_et, ui_datepicker_eu,
-                ui_datepicker_fa, ui_datepicker_fi, ui_datepicker_fo,
-                ui_datepicker_fr, ui_datepicker_fr_CH, ui_datepicker_gl,
-                ui_datepicker_he, ui_datepicker_hr, ui_datepicker_hu,
-                ui_datepicker_hy, ui_datepicker_id, ui_datepicker_is,
-                ui_datepicker_it, ui_datepicker_ja, ui_datepicker_ko,
-                ui_datepicker_kz, ui_datepicker_lt, ui_datepicker_lv,
-                ui_datepicker_ml, ui_datepicker_ms, ui_datepicker_nl,
-                ui_datepicker_no, ui_datepicker_pl, ui_datepicker_pt,
-                ui_datepicker_pt_BR, ui_datepicker_rm, ui_datepicker_ro,
-                ui_datepicker_ru, ui_datepicker_sk, ui_datepicker_sl,
-                ui_datepicker_sq, ui_datepicker_sr, ui_datepicker_sr_SR,
-                ui_datepicker_sv, ui_datepicker_ta, ui_datepicker_th,
-                ui_datepicker_tj, ui_datepicker_tr, ui_datepicker_uk,
-                ui_datepicker_vi, ui_datepicker_zh_CN, ui_datepicker_zh_HK,
-                ui_datepicker_zh_TW, ui_datepicker_cy_GB, ui_datepicker_hi,
-                ui_datepicker_ka, ui_datepicker_kk, ui_datepicker_km,
-                ui_datepicker_lb, ui_datepicker_mk, ui_datepicker_nl_BE])
+jqueryui_i18n = Group([
+    ui_datepicker_af, ui_datepicker_ar, ui_datepicker_ar_DZ,
+    ui_datepicker_az, ui_datepicker_bg, ui_datepicker_bs,
+    ui_datepicker_ca, ui_datepicker_cs, ui_datepicker_da,
+    ui_datepicker_de, ui_datepicker_el, ui_datepicker_en_AU,
+    ui_datepicker_en_GB, ui_datepicker_en_NZ, ui_datepicker_eo,
+    ui_datepicker_es, ui_datepicker_et, ui_datepicker_eu,
+    ui_datepicker_fa, ui_datepicker_fi, ui_datepicker_fo,
+    ui_datepicker_fr, ui_datepicker_fr_CH, ui_datepicker_gl,
+    ui_datepicker_he, ui_datepicker_hr, ui_datepicker_hu,
+    ui_datepicker_hy, ui_datepicker_id, ui_datepicker_is,
+    ui_datepicker_it, ui_datepicker_ja, ui_datepicker_ko,
+    ui_datepicker_lt, ui_datepicker_lv,
+    ui_datepicker_ml, ui_datepicker_ms, ui_datepicker_nl,
+    ui_datepicker_no, ui_datepicker_pl, ui_datepicker_pt,
+    ui_datepicker_pt_BR, ui_datepicker_rm, ui_datepicker_ro,
+    ui_datepicker_ru, ui_datepicker_sk, ui_datepicker_sl,
+    ui_datepicker_sq, ui_datepicker_sr, ui_datepicker_sr_SR,
+    ui_datepicker_sv, ui_datepicker_ta, ui_datepicker_th,
+    ui_datepicker_tj, ui_datepicker_tr, ui_datepicker_uk,
+    ui_datepicker_vi, ui_datepicker_zh_CN, ui_datepicker_zh_HK,
+    ui_datepicker_zh_TW, ui_datepicker_cy_GB, ui_datepicker_hi,
+    ui_datepicker_ka, ui_datepicker_kk, ui_datepicker_km,
+    ui_datepicker_lb, ui_datepicker_mk, ui_datepicker_nl_BE])
 
 ui_datepicker_locales = {
     "af": ui_datepicker_af,
@@ -737,7 +724,6 @@ ui_datepicker_locales = {
     "km": ui_datepicker_km,
     "ko": ui_datepicker_ko,
     "ky": ui_datepicker_ky,
-    "kz": ui_datepicker_kz,
     "lb": ui_datepicker_lb,
     "lt": ui_datepicker_lt,
     "lv": ui_datepicker_lv,
